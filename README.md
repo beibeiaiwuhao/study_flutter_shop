@@ -1,5 +1,7 @@
 #  Flutter 电商学习项目 (更新中)
- [视频教程:技术胖]( https://m.qlchat.com/wechat/page/topic-simple-video?topicId=2000003599735644&byhand=1 )    <br/>
+ [视频教程:技术胖]( https://m.qlchat.com/wechat/page/topic-simple-video?topicId=2000003599735644&byhand=1 ) 
+ [参考的github地址] ( https://github.com/pheromone/flutter_shop.git )
+    <br/>
 
 ## 版本信息:
  flutter stable  version: 1.2.1   <br/>
