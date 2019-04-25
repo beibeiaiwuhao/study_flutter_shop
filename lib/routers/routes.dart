@@ -2,10 +2,13 @@
 import 'package:flutter/material.dart';
 import './router_handler.dart';
 import 'package:fluro/fluro.dart';
+import './member_router_handler.dart';
+
 
 class Routes {
   static String root = '/';
   static String detailPage = '/detail';
+  static String mapPage = '/map';
   static void configureRoutes(Router router) {
     router.notFoundHandler = new Handler(
       //找不到路由
@@ -16,7 +19,8 @@ class Routes {
       //router.define作用相当于注册页面，
       //商品详情界面
       router.define(detailPage,handler: detailHandler);
-    
+      //地图
+      router.define(mapPage,handler:mapHandler);
 
   }
 }

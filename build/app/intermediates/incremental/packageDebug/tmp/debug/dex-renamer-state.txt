@@ -1,0 +1,4 @@
+#Thu Apr 25 18:12:30 CST 2019
+base.0=/Users/haohao/Desktop/Mr Hao/WHFlutter/imitation_shop/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

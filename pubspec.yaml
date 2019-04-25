@@ -33,6 +33,7 @@ dependencies:
   fluro: ^1.4.0 #路由管理器
   flutter_html: ^0.9.6 #html页面解析
   shared_preferences: ^0.5.2 #持久化设置
+  amap_base: ^0.3.5 #高德地图
 
 
   

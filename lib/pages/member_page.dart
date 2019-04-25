@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../routers/application.dart';
 
 class MemberPage extends StatelessWidget {
   @override
@@ -9,7 +10,12 @@ class MemberPage extends StatelessWidget {
         title: Text('会员中心'),
       ),
       body: ListView(
-        children: <Widget>[_topHeader(), _orderTitle(), _orderType(),_actionList()],
+        children: <Widget>[
+          _topHeader(),
+          _orderTitle(),
+          _orderType(),
+          _actionList(context)
+        ],
       ),
     );
   }
@@ -25,7 +31,7 @@ class MemberPage extends StatelessWidget {
             margin: EdgeInsets.only(top: 30),
             child: ClipOval(
               child: Image.network(
-                  'http://blogimages.jspang.com/blogtouxiang1.jpg'),
+                  'http://zjfs2017.oss-cn-shanghai.aliyuncs.com/test/avatar/sign20181204025419871.png'),
             ),
           ),
           Container(
@@ -117,31 +123,36 @@ class MemberPage extends StatelessWidget {
     );
   }
 
-  Widget _actionList() {
+  Widget _actionList(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
       child: Column(
         children: <Widget>[
-          _myListTile('领取优惠券'),
-          _myListTile('已领取优惠券'),
-          _myListTile('地址管理'),
-          _myListTile('客服电话'),
-          _myListTile('关于我们'),
+          _myListTile(context,'领取优惠券'),
+          _myListTile(context,'已领取优惠券'),
+          _myListTile(context,'地址管理'),
+          _myListTile(context,'客服电话'),
+          _myListTile(context,'关于我们'),
         ],
       ),
     );
   }
 
-  Widget _myListTile(String title) {
+  Widget _myListTile(BuildContext context,String title) {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
           border: Border(bottom: BorderSide(width: 1, color: Colors.black12))),
-      child: ListTile(
+      child: InkWell(
+        onTap: (){
+          Application.router.navigateTo(context, 'map');
+        },
+        child: ListTile(
         leading: Icon(Icons.blur_circular),
         title: Text(title),
         trailing: Icon(Icons.arrow_right),
       ),
+      )
     );
   }
 }
